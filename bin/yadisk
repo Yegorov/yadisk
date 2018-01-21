@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+# handle ARGV, and execute Yadisk::Main class
