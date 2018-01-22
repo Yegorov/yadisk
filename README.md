@@ -1,19 +1,28 @@
 Yadisk
 ======
 
-Tool for download
-
+Command line tool for download file from Yandex.Disk through share link
 
 ## Install
 
 ```
-gem install yadisk
+$ gem install yadisk
 ```
 
 For development:
 
 ```
-gem install --dev yadisk
+$ gem install --dev yadisk
+```
+
+## How use
+
+```
+# Save to current directory
+$ yadisk https://yadi.sk/i/UFD
+
+# Save to other directory
+$ yadisk https://yadi.sk/i/UFD /path/to/directory
 ```
 
 ## Test
@@ -21,7 +30,7 @@ gem install --dev yadisk
 For run test use:
 
 ```
-rspec
+$ rspec
 ```
 
 ## Contribution
