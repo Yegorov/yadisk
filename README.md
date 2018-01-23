@@ -19,11 +19,29 @@ $ gem install --dev yadisk
 
 ```
 # Save to current directory
-$ yadisk https://yadi.sk/i/UFD
+$ yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
 
 # Save to other directory
-$ yadisk https://yadi.sk/i/UFD /path/to/directory
+$ yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ /path/to/directory
 ```
+
+## How use for development
+
+```
+# Local build and install to rubygems
+$ gem build yadisk.gemspec && gem install yadisk-*
+
+# Remove local file and uninstall from rubygems
+$ rm yadisk-*.gem && gem uninstall yadisk
+
+# Run script from local folder
+$ ruby -Ilib ./bin/yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
+```
+
+## Dependencies
+
+* [wget](https://www.gnu.org/software/wget/)
+* [ruby](https://www.ruby-lang.org/ru/downloads/) >= 2.2
 
 ## Test
 
@@ -39,5 +57,4 @@ Feel free for send me pull request.
 
 ## License
 
-MIT
-
+License (MIT) Copyright (c) 2018 Yegorov A. yegorov0725@yandex.ru
