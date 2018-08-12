@@ -1,3 +1,7 @@
+[![Gem Version](https://badge.fury.io/rb/yadisk.svg)](https://badge.fury.io/rb/yadisk)
+[![Build Status](https://travis-ci.org/Yegorov/yadisk.svg?branch=master)](https://travis-ci.org/Yegorov/yadisk)
+[![Coverage Status](https://coveralls.io/repos/github/Yegorov/yadisk/badge.svg?branch=master)](https://coveralls.io/github/Yegorov/yadisk?branch=master)
+
 Yadisk
 ======
 
