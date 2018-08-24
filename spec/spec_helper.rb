@@ -103,3 +103,9 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+RSpec.configure do |c|
+  c.after(:example, :download_file) do |example|
+    File.delete(example.metadata[:download_file])
+  end
+end
