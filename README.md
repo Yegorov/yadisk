@@ -47,6 +47,18 @@ $ ruby -Ilib ./bin/yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
 * [wget](https://www.gnu.org/software/wget/)
 * [ruby](https://www.ruby-lang.org/ru/downloads/) >= 2.2
 
+## Use Docker
+
+```
+docker build -t yadisk .
+docker run --rm -it -v ${pwd}:/yadisk yadisk sh # for interactive
+docker run --rm yadisk yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
+```
+
+## Use Docker for Dev
+
+To be soon
+
 ## Test
 
 For run test use:
