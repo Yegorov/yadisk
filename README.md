@@ -51,8 +51,9 @@ $ ruby -Ilib ./bin/yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
 
 ```
 docker build -t yadisk .
-docker run --rm -it -v ${pwd}:/yadisk yadisk sh # for interactive
+docker run -v ${pwd}:/yadisk --rm -it yadisk sh # for interactive
 docker run --rm yadisk yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
+docker run -v $(pwd):/yadisk --rm yadisk yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
 ```
 
 ## Use Docker for Dev
