@@ -16,6 +16,9 @@ Gem::Specification.new do |s|
   s.executables << 'yadisk'
   s.add_development_dependency 'rspec', ['~> 3.7.0', '< 4.0']
   s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'rubocop', '~> 0.71.0'
+  s.add_development_dependency 'rubocop-rspec'
+  s.add_development_dependency 'rubocop-performance'
   s.homepage = 'https://github.com/yegorov/yadisk'
   s.license = 'MIT'
 end
