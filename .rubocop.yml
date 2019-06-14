@@ -15,3 +15,6 @@ require:
 
 AllCops:
   TargetRubyVersion: 2.5
+
+Metrics/LineLength:
+  Max: 110
