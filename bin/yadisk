@@ -6,10 +6,15 @@ require 'yadisk/check_runtime'
 
 Yadisk::CheckRuntime.check_wget
 
-if ARGV.length == 1
-  Yadisk::Main.new.download(ARGV[0])
-elsif ARGV.length == 2
-  Yadisk::Main.new.download(ARGV[0], folder: ARGV[1])
-else
-  puts "Use: $ yadisk url [/path/to/download/local/folder]\n"
+begin
+  if ARGV.length == 1
+    Yadisk::Main.new.download(ARGV[0])
+  elsif ARGV.length == 2
+    Yadisk::Main.new.download(ARGV[0], folder: ARGV[1])
+  else
+    puts "Use: $ yadisk url [/path/to/download/local/folder]\n"
+  end
+rescue OpenSSL::SSL::SSLError
+  puts 'SSL certificate error while accessing Yandex.'
+  exit(-1)
 end
