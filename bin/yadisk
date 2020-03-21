@@ -3,18 +3,37 @@
 
 require 'yadisk'
 require 'yadisk/check_runtime'
+require 'optparse'
 
 Yadisk::CheckRuntime.check_wget
 
+options = {}
+parser = OptionParser.new do |opts|
+  opts.banner = 'Use: $ yadisk url [/path/to/download/local/folder]'
+  opts.separator ''
+  opts.separator 'Options:'
+  opts.on('-w', '--wget-options=OPTIONS', 'additional options passed to wget process') do |wget_options|
+    options[:wget_options] = wget_options
+  end
+end
+
 begin
-  if ARGV.length == 1
-    Yadisk::Main.new.download(ARGV[0])
-  elsif ARGV.length == 2
-    Yadisk::Main.new.download(ARGV[0], folder: ARGV[1])
+  parser.parse!
+
+  url = ARGV.shift
+
+  if url
+    folder = ARGV.shift
+    options[:folder] = folder if folder
+    Yadisk::Main.new.download(url, **options)
   else
-    puts "Use: $ yadisk url [/path/to/download/local/folder]\n"
+    puts parser.help
   end
 rescue OpenSSL::SSL::SSLError
   puts 'SSL certificate error while accessing Yandex.'
+  exit(-1)
+rescue OptionParser::ParseError => exception
+  puts "Error: #{exception}"
+  puts parser.help
   exit(-1)
 end
