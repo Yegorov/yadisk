@@ -17,6 +17,10 @@ module Yadisk
       download_url = json_res['href']
       filename = CGI::parse(URI(download_url).query)["filename"][0]
       folder = folder + File::SEPARATOR if not folder.end_with?(File::SEPARATOR)
+      puts json_res
+      puts download_url
+      puts filename
+      puts folder
 
       system("wget '#{download_url}' -O '#{folder}#{filename}' #{wget_options}")
     end
