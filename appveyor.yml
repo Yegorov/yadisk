@@ -9,9 +9,11 @@ environment:
     - RUBY_VERSION: 23
     - RUBY_VERSION: 24
     - RUBY_VERSION: 25
+    - RUBY_VERSION: 26
 
 install:
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
+  - gem install bundler
   - bundle config --local path vendor/bundle
   - bundle install
 
@@ -23,4 +25,4 @@ before_test:
   - bundle -v
 
 test_script:
-  - bundle exec rake
+  - bundle exec rspec
