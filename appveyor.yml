@@ -10,9 +10,10 @@ environment:
     - RUBY_VERSION: 26
 
 install:
-  - set PATH=C:\msys64\mingw64;C:\msys64\mingw64\bin;C:\Ruby%RUBY_VERSION%\bin;%PATH%
+  - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
   - bundle config --local path vendor/bundle
   - bundle install
+  - choco install wget -y
 
 build: off
 
@@ -20,6 +21,7 @@ before_test:
   - ruby -v
   - gem -v
   - bundle -v
+  - wget -V
 
 test_script:
   - bundle exec rspec
