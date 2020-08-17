@@ -10,7 +10,6 @@ environment:
     - RUBY_VERSION: 24
     - RUBY_VERSION: 25
 
-
 install:
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
   - bundle config --local path vendor/bundle
