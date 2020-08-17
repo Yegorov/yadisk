@@ -5,8 +5,6 @@ cache:
 
 environment:
   matrix:
-    - RUBY_VERSION: 24
-    - RUBY_VERSION: 25
     - RUBY_VERSION: 26
 
 install:
@@ -22,6 +20,7 @@ before_test:
   - gem -v
   - bundle -v
   - wget -V
+  - ruby -e "puts File::SEPARATOR"
 
 test_script:
   - bundle exec rspec
