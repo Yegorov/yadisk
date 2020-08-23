@@ -47,6 +47,11 @@ $ ruby -Ilib ./bin/yadisk https://yadi.sk/i/HEjuI2Ln3RiRcQ
 * [wget](https://www.gnu.org/software/wget/)
 * [ruby](https://www.ruby-lang.org/ru/downloads/) >= 2.2
 
+## Use in Windows
+
+1. Download and install wget from [gnuwin32.sourceforge.net](http://gnuwin32.sourceforge.net/packages/wget.htm)
+2. Add `<you base path>\GnuWin32\bin` (E.g. `C:\Program Files (x86)\GnuWin32\bin`) to [PATH environment variable](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/).
+
 ## Use Docker
 
 ```
