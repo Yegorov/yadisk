@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yadisk (0.0.2)
+    yadisk (0.2.0)
 
 GEM
   remote: http://www.rubygems.org/
@@ -49,4 +49,4 @@ DEPENDENCIES
   yadisk!
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
