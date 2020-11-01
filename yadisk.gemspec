@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.files = ["lib/yadisk.rb", "lib/yadisk/check_runtime.rb", "lib/yadisk/version.rb", "lib/yadisk/os.rb"]
   s.platform = Gem::Platform::RUBY
   s.executables << 'yadisk'
-  s.add_development_dependency 'rspec', '~> 3.9.0', '< 4.0'
+  s.add_development_dependency 'rspec', '~> 3.10.0', '< 4.0'
   s.add_development_dependency 'coveralls'
   s.homepage = 'https://github.com/yegorov/yadisk'
   s.license = 'MIT'
