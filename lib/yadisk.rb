@@ -16,6 +16,7 @@ module Yadisk
       enc_url = CGI::escape(url)
       response = Net::HTTP.get(URI("#{BASE_URL}#{enc_url}"))
       json_res = JSON.parse(response)
+      check_error(json_res)
       download_url = json_res['href']
       filename = CGI::parse(URI(download_url).query)["filename"][0]
       folder = folder + File::SEPARATOR if not folder.end_with?(File::SEPARATOR)
@@ -32,6 +33,13 @@ module Yadisk
 
     def escape_symbol
       Yadisk::OS.windows? ? '"' : "'"
+    end
+
+    def check_error(json_res)
+      if json_res['error']
+        msg = "#{json_res['message']} #{json_res['description']} #{json_res['error']}"
+        abort msg
+      end
     end
   end
 end
