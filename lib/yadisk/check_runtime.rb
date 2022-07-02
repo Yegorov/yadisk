@@ -8,7 +8,7 @@ module Yadisk
   class CheckRuntime
     def self.check_wget
       if Yadisk::OS.windows?
-        output = IO.popen("where wget").read
+        output = IO.popen("wget").read
         abort! unless $?.to_i == 0
         return
       end
