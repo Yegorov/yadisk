@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.description = "Command line tool for download file from Yandex.Disk through share link"
   s.author = "Artem Yegorov"
   s.email = 'yegorov0725@yandex.ru'
-  s.files = ["lib/yadisk.rb", "lib/yadisk/check_runtime.rb", "lib/yadisk/version.rb", "lib/yadisk/os.rb"]
+  s.files = ["lib/yadisk.rb", "lib/yadisk/main.rb", "lib/yadisk/check_runtime.rb", "lib/yadisk/version.rb", "lib/yadisk/os.rb"]
   s.platform = Gem::Platform::RUBY
   s.executables << 'yadisk'
   s.add_development_dependency 'rspec', '~> 3.9', '< 4.0'

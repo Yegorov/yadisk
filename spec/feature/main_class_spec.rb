@@ -1,4 +1,4 @@
-require 'yadisk'
+require 'yadisk/main'
 
 RSpec.describe Yadisk::Main do
   let(:yadisk) { Yadisk::Main.new }

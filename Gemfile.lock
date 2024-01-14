@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yadisk (0.2.0)
+    yadisk (0.3.0)
 
 GEM
   remote: http://www.rubygems.org/

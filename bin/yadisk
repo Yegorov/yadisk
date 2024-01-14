@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require 'yadisk'
+require 'yadisk/main'
 require 'yadisk/check_runtime'
 require 'optparse'
 
