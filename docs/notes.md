@@ -31,3 +31,6 @@ require 'yadisk'
 3.0.0 :001 > Yadisk::VERSION
  => "1.0.0.dev"
 ```
+
+### Setup Github actions
+* [Building and testing Ruby](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-ruby)
