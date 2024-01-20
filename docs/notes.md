@@ -34,3 +34,7 @@ require 'yadisk'
 
 ### Setup Github actions
 * [Building and testing Ruby](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-ruby)
+* [actions/starter-workflows](https://github.com/actions/starter-workflows/blob/main/ci/ruby.yml)
+* [actions/checkout](https://github.com/actions/checkout)
+* [ruby/setup-ruby](https://github.com/ruby/setup-ruby)
+* [Example .github/workflows/tests.yml in discourse](https://github.com/discourse/discourse/blob/main/.github/workflows/tests.yml)

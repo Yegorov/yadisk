@@ -20,9 +20,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
       - name: Install dependencies
         run: |
           sudo apt-get install wget -y
-          bundle install
+          bundle install --jobs 4 --retry 3
       - name: Run tests
         run: bundle exec rspec
