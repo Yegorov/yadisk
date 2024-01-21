@@ -26,4 +26,4 @@ jobs:
           sudo apt-get install wget -y
           bundle install --jobs 4 --retry 3
       - name: Run tests
-        run: bundle exec rspec
+        run: COVERALLS_REPO_TOKEN=${{env.COVERALLS_REPO_TOKEN}} bundle exec rspec
