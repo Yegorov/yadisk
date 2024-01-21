@@ -53,6 +53,7 @@ PLATFORMS
 DEPENDENCIES
   coveralls_reborn
   rspec (~> 3.9, < 4.0)
+  simplecov
   yadisk!
 
 BUNDLED WITH

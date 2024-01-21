@@ -14,9 +14,17 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require 'simplecov'
 require 'coveralls'
-Coveralls.wear!
 
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+SimpleCov.start
+# Coveralls.wear!
+
+require 'yadisk'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -102,6 +110,9 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  config.order = :random
+  Kernel.srand config.seed
 end
 
 RSpec.configure do |c|
