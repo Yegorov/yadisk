@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  # Setting an environment variable with the value of a configuration variable
+  COVERALLS_REPO_TOKEN: ${{ vars.COVERALLS_REPO_TOKEN }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -26,4 +30,4 @@ jobs:
           sudo apt-get install wget -y
           bundle install --jobs 4 --retry 3
       - name: Run tests
-        run: COVERALLS_REPO_TOKEN=${{vars.COVERALLS_REPO_TOKEN}} bundle exec rspec
+        run: bundle exec rspec
