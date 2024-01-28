@@ -6,7 +6,3 @@ module Yadisk
     end
   end
 end
-
-require 'yadisk/client/resources/resource'
-require 'yadisk/client/resources/v1'
-

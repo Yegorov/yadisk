@@ -1,6 +1,6 @@
+# frozen_string_literal: true
+
 require 'uri'
-require 'yadisk/client/request/curlify'
-require 'yadisk/client/request/http_faraday'
 
 module Yadisk
   class Client

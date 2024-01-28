@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require 'yadisk/client/configuration'
-require 'yadisk/client/resources'
-require 'yadisk/client/request'
-require 'yadisk/client/response'
-
 module Yadisk
   class Client
     attr_reader :config
