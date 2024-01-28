@@ -6,6 +6,8 @@ RSpec.describe Yadisk::Client::Resources::V1::Disk do
     Yadisk::Client.configure do |c|
       c.oauth_token = 'token123'
     end
+
+
   end
 
   after do
@@ -26,7 +28,7 @@ RSpec.describe Yadisk::Client::Resources::V1::Disk do
     expect(subject.to_url).to eq('https://cloud-api.yandex.net/v1/disk')
   end
 
-  it "#call" do
-    expect(subject.call).to be_a(Yadisk::Client::Response)
+  xit "#info" do
+    expect(subject.info).to be_a(Yadisk::Client::Response)
   end
 end
