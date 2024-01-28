@@ -17,17 +17,9 @@ module Yadisk
 
         def to_url = "#{parent_resource.to_url}/#{path}"
 
-        private
-
-        def default_headers
-          {
-            "Content-Type" => "application/json",
-            "User-Agent" => user_agent
-          }
-        end
-
-        def user_agent
-          "Yadisk/#{Yadisk::VERSION}"
+        def build_request(**params, &block)
+          request_params = { config: client.config }.merge(params)
+          Request.build(**request_params, &block)
         end
       end
     end

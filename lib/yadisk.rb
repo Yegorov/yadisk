@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 module Yadisk
+  NAME = 'Yadisk'
 end
 
 require 'yadisk/version'

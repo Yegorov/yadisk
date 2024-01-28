@@ -3,7 +3,9 @@
 module Yadisk
   class Client
     class Configuration
-      attr_accessor :oauth_token
+      attr_accessor :oauth_token,
+                    :faraday_request_options,
+                    :faraday_logger
 
       def initialize(oauth_token: nil)
         @oauth_token = oauth_token

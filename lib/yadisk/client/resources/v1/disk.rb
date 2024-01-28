@@ -5,18 +5,21 @@ module Yadisk
     module Resources
       class V1
         class Disk < Resource
+          include HttpHeaders
+
           def path = 'disk'
 
-          def call
-            # Create Request
+          def info(fields: nil)
             url = to_url
-            headers = default_headers
-            puts url
-            puts headers
-            puts client.config.oauth_token
-            # headers = to_headers
-            # Request.new(method: :get, url: url, headers: headers, query: query, body: body)
-            Response.new # TODO
+            query = { "fields" => fields }.compact
+            headers = build_headers
+            req = build_request(method: :get) do |r|
+              r.url = url
+              r.query = query
+              r.headers = headers
+            end
+            resp = req.()
+
           end
         end
       end

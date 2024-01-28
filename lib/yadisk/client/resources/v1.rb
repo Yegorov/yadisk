@@ -25,4 +25,5 @@ module Yadisk
   end
 end
 
+require 'yadisk/client/resources/v1/helpers'
 require 'yadisk/client/resources/v1/disk'
