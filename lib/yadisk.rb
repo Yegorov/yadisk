@@ -18,6 +18,12 @@ module Yadisk
 
   require 'yadisk/client/response'
 
+  require 'yadisk/client/entities'
+  require 'yadisk/client/entities/v1'
+  require 'yadisk/client/entities/v1/base_entity'
+  require 'yadisk/client/entities/v1/error'
+  require 'yadisk/client/entities/v1/disk'
+
 
   NAME = 'Yadisk'
 end
